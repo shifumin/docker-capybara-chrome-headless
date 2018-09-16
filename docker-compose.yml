@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  capybara:
+    build: .
+    tty: true
+    stdin_open: true
+    volumes:
+      - .:/app
+      - bundle-data:/usr/local/bundle
+volumes:
+  bundle-data:
+    driver: local
